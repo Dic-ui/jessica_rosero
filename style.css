@@ -1,0 +1,302 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes y colores */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estilos generales */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Encabezado */
+.header {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Sección Sobre Mí */
+.about-me {
+    background-color: white;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2980b9;
+    text-align: center;
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Navegación */
+.navigation {
+    background-color: #ecf0f1;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.navigation h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2980b9;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2980b9;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #9b59b6;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover {
+    color: #9b59b6;
+    transform: scale(1.1);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Sección Footer */
+.footer {
+    background-color: #34495e;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-content p {
+    font-size: 1rem;
+}
+
+/* Efectos de transición y animaciones */
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+/* Diseño responsivo */
+
+/* Media Query para pantallas menores a 480px */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 2.5rem; /* Reduce el tamaño del título */
+    }
+
+    .header-subtitle {
+        font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
+    }
+
+    .about-me h2 {
+        font-size: 1.8rem; /* Reduce el tamaño de los encabezados */
+    }
+
+    .about-me p {
+        font-size: 1rem; /* Ajusta el tamaño del texto en esta sección */
+    }
+
+    .navigation h3 {
+        font-size: 1.5rem; /* Ajusta el tamaño del título de navegación */
+    }
+
+    .nav-link {
+        font-size: 1.1rem; /* Ajusta el tamaño de los enlaces */
+    }
+
+    .footer-content p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto del pie de página */
+    }
+
+    .navigation ul li {
+        display: block; /* Cambia la disposición de los enlaces a vertical */
+        margin-bottom: 10px;
+    }
+}
+
+/* Media Query para pantallas menores a 768px */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 3rem; /* Ajusta el tamaño del título */
+    }
+
+    .header-subtitle {
+        font-size: 1.3rem; /* Ajusta el tamaño del subtítulo */
+    }
+
+    .about-me h2 {
+        font-size: 2.2rem; /* Ajusta el tamaño del encabezado en la sección Sobre Mí */
+    }
+
+    .about-me p {
+        font-size: 1.1rem; /* Ajusta el tamaño del texto */
+    }
+
+    .navigation h3 {
+        font-size: 1.8rem; /* Ajusta el tamaño del título de navegación */
+    }
+
+    .nav-link {
+        font-size: 1.2rem; /* Ajusta el tamaño de los enlaces */
+    }
+
+    .footer-content p {
+        font-size: 1rem; /* Ajusta el tamaño del texto del pie de página */
+    }
+
+    .navigation ul li {
+        display: inline-block; /* Mantiene la disposición horizontal de los enlaces */
+        margin: 0 10px;
+    }
+}
+
+/* Media Query para pantallas menores a 1024px */
+@media (max-width: 1024px) {
+    .header-title {
+        font-size: 3.2rem; /* Ajuste de tamaño del título */
+    }
+
+    .header-subtitle {
+        font-size: 1.4rem; /* Ajuste de tamaño del subtítulo */
+    }
+
+    .about-me h2 {
+        font-size: 2.4rem; /* Ajusta el tamaño del encabezado */
+    }
+
+    .about-me p {
+        font-size: 1.2rem; /* Ajuste del tamaño del texto */
+    }
+
+    .navigation h3 {
+        font-size: 1.9rem; /* Ajuste de tamaño del título en la navegación */
+    }
+
+    .nav-link {
+        font-size: 1.3rem; /* Ajuste de tamaño de los enlaces */
+    }
+
+    .footer-content p {
+        font-size: 1rem; /* Ajuste del tamaño de fuente en el pie de página */
+    }
+}
+
+/* Media Query adicional para pantallas mayores a 1200px (para pantallas muy grandes) */
+@media (min-width: 1200px) {
+    .header-title {
+        font-size: 4rem; /* Aumenta el tamaño del título en pantallas grandes */
+    }
+
+    .header-subtitle {
+        font-size: 1.6rem; /* Aumenta el tamaño del subtítulo */
+    }
+
+    .about-me h2 {
+        font-size: 2.8rem; /* Ajuste para pantallas grandes */
+    }
+
+    .about-me p {
+        font-size: 1.3rem; /* Ajuste de tamaño de texto */
+    }
+
+    .navigation h3 {
+        font-size: 2rem; /* Título de navegación más grande */
+    }
+
+    .nav-link {
+        font-size: 1.4rem; /* Ajuste de tamaño de los enlaces */
+    }
+
+    .footer-content p {
+        font-size: 1.1rem; /* Texto del pie de página más grande */
+    }
+}
